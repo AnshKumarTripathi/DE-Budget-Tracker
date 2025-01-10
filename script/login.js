@@ -6,7 +6,7 @@ function storeUsername(e) {
   e.preventDefault();
   if (username.value.trim() !== "") {
     localStorage.setItem("username", username.value);
-    window.location.href = "../html/index.html";
+    window.location.href = "../html/index_second.html";
   }
 }
 
