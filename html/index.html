@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Budget Tracker</title>
   <link rel="stylesheet" href="../styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -35,8 +36,8 @@
     <h3>Add New Transaction</h3>
     <form id="form">
       <div class="form-control">
-        <label for="text">Text</label>
-        <input type="text" id="text" placeholder="Enter text...">
+        <label for="text">Expense</label>
+        <input type="text" id="text" placeholder="Enter Expense...">
       </div>
       <div class="form-control">
         <label for="amount">Amount <br> (negative - expense, positive - income)</label>
@@ -48,6 +49,19 @@
     <ul id="list" class="list">
       <!-- Transactions will be added here -->
     </ul>
+
+    <div>
+      <h3>Budget Visualizations</h3>
+      <button class="btn" id="analyze-btn">Analyze</button>
+      <div id="chart-container" style="display:none;">
+        <select id="chart-type">
+          <option value="pie">Pie Chart</option>
+          <option value="bar">Bar Chart</option>
+          <option value="line">Line Chart</option>
+        </select>
+        <canvas id="budget-chart" width="400" height="400"></canvas>
+      </div>
+    </div>
   </div>
 
   <script src="../script/script.js"></script>
