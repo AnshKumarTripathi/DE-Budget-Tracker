@@ -1,0 +1,154 @@
+/* style.css */
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 18px;
+  color: #2980b9;
+  font-weight: bold;
+  text-align: end;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 10px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance {
+  margin-bottom: 20px;
+}
+
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.inc-exp-container div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.inc-exp-container .money {
+  font-size: 20px;
+}
+
+.inc-exp-container p {
+  transition: all 0.3s ease-in-out;
+}
+
+.inc-exp-container p:hover {
+  transform: scale(1.1);
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #2980b9;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #3498db;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 5px solid;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.list li:hover {
+  transform: scale(1.05);
+}
+
+.list li.plus {
+  border-color: #2ecc71;
+}
+
+.list li.minus {
+  border-color: #c0392b;
+}
+
+.list .delete-btn {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.list .delete-btn:hover {
+  color: #c0392b;
+}

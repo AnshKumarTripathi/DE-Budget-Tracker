@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="budget-container" class="container" style="display:none;">
+    <div class="header">
+      <p id="user-name"></p>
+      <h1>Personal Budget Tracker</h1>
+    </div>
+    <div class="balance">
+      <h2>Your Balance</h2>
+      <h3 id="balance">$0.00</h3>
+    </div>
+
+    <div class="inc-exp-container">
+      <div>
+        <h4>Income</h4>
+        <p id="money-plus" class="money plus">+Rs0.00</p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="money-minus" class="money minus">-Rs0.00</p>
+      </div>
+    </div>
+
+    <h3>Add New Transaction</h3>
+    <form id="form">
+      <div class="form-control">
+        <label for="text">Text</label>
+        <input type="text" id="text" placeholder="Enter text...">
+      </div>
+      <div class="form-control">
+        <label for="amount">Amount <br> (negative - expense, positive - income)</label>
+        <input type="number" id="amount" placeholder="Enter amount...">
+      </div>
+      <button class="btn">Add Transaction</button>
+    </form>
+
+    <h3>History</h3>
+    <ul id="list" class="list">
+      <!-- Transactions will be added here -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
