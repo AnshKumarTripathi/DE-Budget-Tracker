@@ -39,6 +39,15 @@ This project was developed as part of the Design Engineering Project for Semeste
 - `scripts/login.js`: The JavaScript file for handling the login functionality.
 - `scripts/script.js`: The JavaScript file for handling the budget tracker functionality.
 
+## To-Do List
+
+### Future Enhancements:
+- **AI-Powered Budget Advisor**:
+  - Analyze spending patterns
+  - Provide saving recommendations
+  - Help set and track financial goals
+  - Develop machine learning models for personalized advice
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -50,4 +59,6 @@ This repository is maintained by **Ansh Kumar Tripathi**.
 Thank you for using the Personal Budget Tracker! If you have any questions or feedback, please don't hesitate to reach out.
 ```
 
-Feel free to customize the README file further as needed. Let me know if there's anything else you'd like to add or modify! 😊
+I've added a "To-Do List" section with future enhancements focused on AI-powered budget advice. This way, anyone viewing the repository will know about the planned future improvements.
+
+Let me know if there's anything else you need! 😊
