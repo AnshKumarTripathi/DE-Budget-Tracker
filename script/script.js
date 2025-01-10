@@ -7,6 +7,7 @@ const text = document.getElementById("text");
 const amount = document.getElementById("amount");
 const budgetContainer = document.getElementById("budget-container");
 const userNameDisplay = document.getElementById("user-name");
+const themeSwitch = document.getElementById("theme-switch");
 
 let transactions = [];
 
@@ -45,11 +46,11 @@ function addTransactionDOM(transaction) {
   item.classList.add(transaction.amount < 0 ? "minus" : "plus");
 
   item.innerHTML = `
-        ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
-        <button class="delete-btn" onclick="removeTransaction(${
-          transaction.id
-        })">x</button>
-    `;
+    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
+    <button class="delete-btn" onclick="removeTransaction(${
+      transaction.id
+    })">x</button>
+  `;
 
   list.appendChild(item);
 }
@@ -83,8 +84,22 @@ function updateLocalStorage() {
   localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+  document.querySelector(".container").classList.toggle("dark-theme");
+  document
+    .querySelectorAll(".btn")
+    .forEach((btn) => btn.classList.toggle("dark-theme"));
+  document
+    .querySelectorAll(".list li")
+    .forEach((li) => li.classList.toggle("dark-theme"));
+  localStorage.setItem("theme", themeSwitch.checked ? "dark" : "light");
+}
+
 function init() {
   const storedName = localStorage.getItem("username");
+  const savedTheme = localStorage.getItem("theme");
+
   if (storedName) {
     userNameDisplay.innerText = `Welcome, ${storedName}`;
     budgetContainer.style.display = "block";
@@ -93,9 +108,15 @@ function init() {
     transactions.forEach(addTransactionDOM);
     updateValues();
   } else {
-    window.location.href = "login.html";
+    window.location.href = "../login.html";
+  }
+
+  if (savedTheme === "dark") {
+    themeSwitch.checked = true;
+    toggleTheme();
   }
 }
 
 document.addEventListener("DOMContentLoaded", init);
 form.addEventListener("submit", addTransaction);
+themeSwitch.addEventListener("change", toggleTheme);

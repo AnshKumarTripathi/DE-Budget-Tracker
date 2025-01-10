@@ -1,5 +1,6 @@
-/* style.css */
+/* styles.css */
 
+/* Base styles */
 body {
   font-family: "Arial", sans-serif;
   background-color: #f4f4f4;
@@ -11,6 +12,7 @@ body {
   height: 100vh;
 }
 
+/* Container */
 .container {
   max-width: 400px;
   width: 100%;
@@ -20,11 +22,11 @@ body {
   border-radius: 10px;
 }
 
+/* Header */
 .header {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .header p {
   margin: 0;
   font-size: 18px;
@@ -34,13 +36,13 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
-
 .header h1 {
   margin: 10px 0 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
+/* Headings */
 h1,
 h2,
 h3,
@@ -49,46 +51,44 @@ h4 {
   margin-bottom: 20px;
 }
 
+/* Balance */
 .balance {
   margin-bottom: 20px;
 }
 
+/* Income-Expense Container */
 .inc-exp-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
 .inc-exp-container div {
   flex: 1;
   text-align: center;
   padding: 10px;
 }
-
 .inc-exp-container .money {
   font-size: 20px;
 }
-
 .inc-exp-container p {
   transition: all 0.3s ease-in-out;
 }
-
 .inc-exp-container p:hover {
   transform: scale(1.1);
 }
 
+/* Money classes */
 .money.plus {
   color: #2ecc71;
 }
-
 .money.minus {
   color: #c0392b;
 }
 
+/* Form Control */
 .form-control {
   margin-bottom: 10px;
 }
-
 .form-control input {
   width: 95%;
   padding: 10px;
@@ -97,6 +97,7 @@ h4 {
   border-radius: 5px;
 }
 
+/* Button */
 .btn {
   width: 100%;
   background-color: #2980b9;
@@ -107,17 +108,16 @@ h4 {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
 .btn:hover {
   background-color: #3498db;
 }
 
+/* List */
 .list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 .list li {
   background: #f4f4f4;
   padding: 10px;
@@ -128,19 +128,15 @@ h4 {
   transition: all 0.3s ease-in-out;
   outline: none;
 }
-
 .list li:hover {
   transform: scale(1.05);
 }
-
 .list li.plus {
   border-color: #2ecc71;
 }
-
 .list li.minus {
   border-color: #c0392b;
 }
-
 .list .delete-btn {
   background: transparent;
   border: none;
@@ -148,7 +144,66 @@ h4 {
   cursor: pointer;
   font-size: 20px;
 }
-
 .list .delete-btn:hover {
   color: #c0392b;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.container.dark-theme {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.header.dark-theme p,
+.header.dark-theme h1 {
+  border-bottom: 1px solid #444;
+}
+.balance.dark-theme h3,
+.inc-exp-container.dark-theme p {
+  color: #e0e0e0;
+}
+.btn.dark-theme {
+  background-color: #333;
+  color: #e0e0e0;
+}
+.btn.dark-theme:hover {
+  background-color: #444;
+}
+.list li.dark-theme {
+  background: #2c2c2c;
+}
+.list li.dark-theme.plus {
+  border-color: #27ae60;
+}
+.list li.dark-theme.minus {
+  border-color: #c0392b;
+}
+.list .delete-btn.dark-theme:hover {
+  color: #f44336;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  background-color: dodgerblue;
+  border-radius: 4px;
+}
+.theme-toggle label {
+  display: block;
+  font-size: 16px;
+}
+.theme-toggle input {
+  /* transform: translateY(-5px); */
+  transform: scale(1.2);
+}
+.theme-toggle.dark-theme label {
+  color: #e0e0e0;
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Budget Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
@@ -14,11 +14,14 @@
       <p id="user-name"></p>
       <h1>Personal Budget Tracker</h1>
     </div>
+    <div class="theme-toggle">
+      <label for="theme-switch">Dark Mode</label>
+      <input type="checkbox" id="theme-switch">
+    </div>
     <div class="balance">
       <h2>Your Balance</h2>
       <h3 id="balance">$0.00</h3>
     </div>
-
     <div class="inc-exp-container">
       <div>
         <h4>Income</h4>
@@ -29,7 +32,6 @@
         <p id="money-minus" class="money minus">-Rs0.00</p>
       </div>
     </div>
-
     <h3>Add New Transaction</h3>
     <form id="form">
       <div class="form-control">
@@ -42,14 +44,13 @@
       </div>
       <button class="btn">Add Transaction</button>
     </form>
-
     <h3>History</h3>
     <ul id="list" class="list">
       <!-- Transactions will be added here -->
     </ul>
   </div>
 
-  <script src="script.js"></script>
+  <script src="../script/script.js"></script>
 </body>
 
 </html>
